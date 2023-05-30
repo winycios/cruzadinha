@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>CRUZADINHA</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="container">
+            <div class="box">
+                <span class="title">LISTA</span>
+                <div class="lista_palavra">
+                    <ol>
+                        <li><p id="pala_cpu">*CPU</p></li>
+                        <li><p id="pala_ula">*ULA</p></li>
+                        <li><p id="pala_registradores">*REGISTRADORES</p></li>
+                        <li><p id="pala_ram">*RAM</p></li>
+                        <li><p id="pala_rom">*ROM</p></li>
+                        <li><p id="pala_eprom">*EPROM</p></li>
+                        <li><p id="pala_flash">*FLASH</p></li>
+                        <li><p id="pala_memoria">*MEMORIA DE MASSA</p></li>
+                        <li><p id="pala_dma">DMA</p></li>
+                        <li><p id="pala_cs">*CS</p></li>
+                        <li><p id="pala_address">ADDRESS BUS</p></li>
+                        <li><p id="pala_data">*DATA BUS</p></li>
+                        <li><p id="pala_i5">*I5</p></li>
+                        <li><p id="pala_i7">*I7</p></li>
+                        <li><p id="pala_dual">DUAL CORE</p></li>
+                        <li><p id="pala_quad">QUAD CORE</p></li>
+                        <li><p id="pala_threads">*THREADS</p></li>
+                        <li><p id="pala_cache">*CACHE</p></li>
+                    </ol>
+                    <span>Total de acertos :</span> <span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_caca">
+            <h2>Arquitetura <span style="color: cadetblue;">computacional</span></h2>
+
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_M"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_E"></td>
+                    <td><input onkeyup="Task_eprom()" onkeydown="Task_eprom()" maxlength="1" placeholder="6" id="eprom_P"></td>
+                    <td><input onkeyup="Task_eprom()" onkeydown="Task_eprom()" maxlength="1" placeholder="6" id="eprom_R"></td>
+                    <td><input onkeyup="Task_eprom()" onkeydown="Task_eprom()" maxlength="1" placeholder="6" id="eprom_O"></td>
+                    <td><input onkeyup="Task_eprom()" onkeydown="Task_eprom()" maxlength="1" placeholder="6" id="eprom_M"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_M2"></td>
+                    <td></td>
+                    <td><input onkeyup="Task_ula()" onkeydown="Task_ula()" maxlength="1" placeholder="2" id="ula_U"></td>
+                    <td><input onkeyup="Task_ula()" onkeydown="Task_ula()" maxlength="1" placeholder="2" id="ula_L"></td>
+                    <td><input onkeyup="Task_ram()" onkeydown="Task_ram()" maxlength="1" placeholder="4" id="ram_A"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_O"></td>
+                    <td></td>
+                    <td><input onkeyup="Task_cpu()" onkeydown="Task_cpu()" maxlength="1" placeholder="1" id="cpu_P"></td>
+                    <td></td>
+                    <td><input onkeyup="Task_ram()" onkeydown="Task_ram()" maxlength="1" placeholder="4" id="ram_R"></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="Task_threads()" onkeydown="Task_threads()" maxlength="1" placeholder="17" id="threads_T"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_rom()" onkeydown="Task_rom()" maxlength="1" placeholder="5" id="rom_M"></td>
+                    <td><input onkeyup="Task_rom()" onkeydown="Task_rom()" maxlength="1" placeholder="5" id="rom_O"></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_R"></td>
+                    <td></td>
+                    <td><input onkeyup="Task_cpu()" onkeydown="Task_cpu()" maxlength="1" placeholder="1" id="cpu_C"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="Task_threads()" onkeydown="Task_threads()" maxlength="1" placeholder="17" id="threads_H"></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_i5()" onkeydown="Task_i5()" maxlength="1" placeholder="13" id="i5_5"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_I"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_cs()" onkeydown="Task_cs()" maxlength="1" placeholder="10" id="cs_C"></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1"  placeholder="3" id="registrador_R"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1"  placeholder="3"id="registrador_E"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1"  placeholder="3"id="registrador_G"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1"  placeholder="3"id="registrador_I"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1"  placeholder="3"id="registrador_S"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1"  placeholder="3"id="registrador_T"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1"  placeholder="3"id="registrador_R2"></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_A"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1" placeholder="3" id="registrador_D"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1" placeholder="3" id="registrador_O"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1" placeholder="3" id="registrador_R3"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1" placeholder="3" id="registrador_E2"></td>
+                    <td><input onkeyup="Task_registradores()" onkeydown="Task_registradores()" maxlength="1" placeholder="3" id="registrador_S2"></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="Task_threads()" onkeydown="Task_threads()" maxlength="1" placeholder="17" id="threads_E"></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_i7()" onkeydown="Task_i7()" maxlength="1" placeholder="14" id="i7_7"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_D"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_dual()" onkeydown="Task_dual()" maxlength="1" placeholder="15" id="dual_R"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="Task_threads()" onkeydown="Task_threads()" maxlength="1" placeholder="17" id="threads_A"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_E2"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_dual()" onkeydown="Task_dual()" maxlength="1" placeholder="15" id="dual_0"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="Task_threads()" onkeydown="Task_threads()" maxlength="1" placeholder="17" id="threads_D"></td>
+                    <td><input onkeyup="Task_data()" onkeydown="Task_data()" maxlength="1" placeholder="12" id="data_A"></td>
+                    <td><input onkeyup="Task_data()" onkeydown="Task_data()" maxlength="1" placeholder="12" id="data_T"></td>
+                    <td><input onkeyup="Task_data()" onkeydown="Task_data()" maxlength="1" placeholder="12" id="data_A2"></td>
+                    <td><input onkeyup="Task_data()" onkeydown="Task_data()" maxlength="1" placeholder="12" id="data_B"></td>
+                    <td><input onkeyup="Task_data()" onkeydown="Task_data()" maxlength="1" placeholder="12" id="data_U"></td>
+                    <td><input onkeyup="Task_data()" onkeydown="Task_data()" maxlength="1" placeholder="12" id="data_S"></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_M3"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_dual()" onkeydown="Task_dual()" maxlength="1" placeholder="15" id="dual_C"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td><input onkeyup="Task_threads()" onkeydown="Task_threads()" maxlength="1" placeholder="17" id="threads_S"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_flash()" onkeydown="Task_flash()" maxlength="1" placeholder="7" id="flash_F"></td>
+                    <td><input onkeyup="Task_flash()" onkeydown="Task_flash()" maxlength="1" placeholder="7" id="flash_L"></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_A2"></td>
+                    <td><input onkeyup="Task_flash()" onkeydown="Task_flash()" maxlength="1" placeholder="7" id="flash_S"></td>
+                    <td><input onkeyup="Task_flash()" onkeydown="Task_flash()" maxlength="1" placeholder="7" id="flash_H"></td>
+                    <td></td>
+                    <td><input onkeyup="Task_dual()" onkeydown="Task_dual()" maxlength="1" placeholder="15" id="dual_L"></td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_S"></td>
+                    <td></td>
+                    <td><input onkeyup="Task_quad()" onkeydown="Task_quad()" maxlength="1" placeholder="16" id="quad_Q"></td>
+                    <td><input onkeyup="Task_quad()" onkeydown="Task_quad()" maxlength="1" placeholder="16" id="quad_U"></td>
+                    <td><input onkeyup="Task_dual()" onkeydown="Task_dual()" maxlength="1" placeholder="15" id="dual_A"></td>
+                    <td><input onkeyup="Task_quad()" onkeydown="Task_quad()" maxlength="1" placeholder="16" id="quad_D"></td>
+                    <td><input onkeyup="Task_quad()" onkeydown="Task_quad()" maxlength="1" placeholder="16" id="quad_C"></td>
+                    <td><input onkeyup="Task_quad()" onkeydown="Task_quad()" maxlength="1" placeholder="16" id="quad_O"></td>
+                    <td><input onkeyup="Task_quad()" onkeydown="Task_quad()" maxlength="1" placeholder="16" id="quad_R"></td>
+                    <td><input onkeyup="Task_quad()" onkeydown="Task_quad()" maxlength="1" placeholder="16" id="quad_E"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><input onkeyup="Task_address()" onkeydown="Task_address()" maxlength="1" placeholder="11" id="address_A"></td>
+                    <td><input onkeyup="Task_address()" onkeydown="Task_address()" maxlength="1" placeholder="11" id="address_D"></td>
+                    <td><input onkeyup="Task_address()" onkeydown="Task_address()" maxlength="1" placeholder="11" id="address_D2"></td>
+                    <td><input onkeyup="Task_address()" onkeydown="Task_address()" maxlength="1" placeholder="11" id="address_R"></td>
+                    <td><input onkeyup="Task_address()" onkeydown="Task_address()" maxlength="1" placeholder="11" id="address_E"></td>
+                    <td><input onkeyup="Task_address()" onkeydown="Task_address()" maxlength="1" placeholder="11" id="address_S"></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_S2"></td>
+                    <td><input onkeyup="Task_address()" onkeydown="Task_address()" maxlength="1" placeholder="11" id="address_B"></td>
+                    <td><input onkeyup="Task_address()" onkeydown="Task_address()" maxlength="1" placeholder="11" id="address_U"></td>
+                    <td><input onkeyup="Task_address()" onkeydown="Task_address()" maxlength="1" placeholder="11" id="address_S2"></td>
+                    <td><input onkeyup="Task_dual()" onkeydown="Task_dual()" maxlength="1" placeholder="15" id="dual_U"></td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><input onkeyup="Task_cache()" onkeydown="Task_cache()" maxlength="1" placeholder="18" id="cache_C"></td>
+                    <td><input onkeyup="Task_memoria()" onkeydown="Task_memoria()" maxlength="1" placeholder="8" id="memoria_A3"></td>
+                    <td><input onkeyup="Task_cache()" onkeydown="Task_cache()" maxlength="1" placeholder="18" id="cache_C2"></td>
+                    <td><input onkeyup="Task_cache()" onkeydown="Task_cache()" maxlength="1" placeholder="18" id="cache_H"></td>
+                    <td><input onkeyup="Task_cache()" onkeydown="Task_cache()" maxlength="1" placeholder="18" id="cache_E"></td>
+                    <td><input onkeyup="Task_dual()" onkeydown="Task_dual()" maxlength="1" placeholder="15" id="dual_D"></td>
+                    <td><input onkeyup="Task_dma()" onkeydown="Task_dma()" maxlength="1" placeholder="9" id="dma_M"></td>
+                    <td><input onkeyup="Task_dma()" onkeydown="Task_dma()" maxlength="1" placeholder="9" id="dma_A"></td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
