@@ -1,27 +1,32 @@
-function Task_memoria() {
+var contador = 0;
 
+function Task_memoria() {
     var memoria = memoria_M.value + memoria_E.value + memoria_M2.value + memoria_O.value + memoria_R.value + memoria_I.value + memoria_A.value + memoria_D.value + memoria_E2.value + memoria_M3.value + memoria_A2.value + memoria_S.value + memoria_S2.value + memoria_A3.value;
 
     memoria = memoria.toLowerCase();
 
     if (memoria == "memoriademassa") {
 
-        memoria_M.style.backgroundColor = "#6dff96";
-        memoria_E.style.backgroundColor = "#6dff96";
-        memoria_M2.style.backgroundColor = "#6dff96";
-        memoria_O.style.backgroundColor = "#6dff96";
-        memoria_R.style.backgroundColor = "#6dff96";
-        memoria_I.style.backgroundColor = "#6dff96";
-        memoria_A.style.backgroundColor = "#6dff96";
-        memoria_D.style.backgroundColor = "#6dff96";
-        memoria_E2.style.backgroundColor = "#6dff96";
-        memoria_M3.style.backgroundColor = "#6dff96";
-        memoria_A2.style.backgroundColor = "#6dff96";
-        memoria_S.style.backgroundColor = "#6dff96";
-        memoria_S2.style.backgroundColor = "#6dff96";
-        memoria_A3.style.backgroundColor = "#6dff96";
+        // caso a palavra esteja correta , a caixa será pintada de verde e terá o campo será desabilitado
+        memoria_M.style.backgroundColor = "#6dff96", memoria_M.style.pointerEvents = "none";
+        memoria_E.style.backgroundColor = "#6dff96", memoria_E.style.pointerEvents = "none";
+        memoria_M2.style.backgroundColor = "#6dff96", memoria_M2.style.pointerEvents = "none";
+        memoria_O.style.backgroundColor = "#6dff96", memoria_O.style.pointerEvents = "none";
+        memoria_R.style.backgroundColor = "#6dff96", memoria_R.style.pointerEvents = "none";
+        memoria_I.style.backgroundColor = "#6dff96", memoria_I.style.pointerEvents = "none";
+        memoria_A.style.backgroundColor = "#6dff96", memoria_A.style.pointerEvents = "none";
+        memoria_D.style.backgroundColor = "#6dff96", memoria_D.style.pointerEvents = "none";
+        memoria_E2.style.backgroundColor = "#6dff96", memoria_E2.style.pointerEvents = "none";
+        memoria_M3.style.backgroundColor = "#6dff96", memoria_M3.style.pointerEvents = "none";
+        memoria_A2.style.backgroundColor = "#6dff96", memoria_A2.style.pointerEvents = "none";
+        memoria_S.style.backgroundColor = "#6dff96", memoria_S.style.pointerEvents = "none";
+        memoria_S2.style.backgroundColor = "#6dff96", memoria_S2.style.pointerEvents = "none";
+        memoria_A3.style.backgroundColor = "#6dff96", memoria_A3.style.pointerEvents = "none";
 
-        pala_memoria.style.textDecoration = "line-through"
+        pala_memoria.style.textDecoration = "line-through" //funcionalidade para caso o usuario acertar a resposta, risca a pergunta daquela resposta.
+
+        // contador de respostas//
+        contador += 1;
 
     } else if (memoria.length < 14) {
         memoria_M.style.backgroundColor = "white";
@@ -43,24 +48,30 @@ function Task_memoria() {
 
     } else {
 
-        memoria_M.style.backgroundColor = "red";
-        memoria_E.style.backgroundColor = "red";
-        memoria_M2.style.backgroundColor = "red";
-        memoria_O.style.backgroundColor = "red";
-        memoria_R.style.backgroundColor = "red";
-        memoria_I.style.backgroundColor = "red";
-        memoria_A.style.backgroundColor = "red";
-        memoria_D.style.backgroundColor = "red";
-        memoria_E2.style.backgroundColor = "red";
-        memoria_M3.style.backgroundColor = "red";
-        memoria_A2.style.backgroundColor = "red";
-        memoria_S.style.backgroundColor = "red";
-        memoria_S2.style.backgroundColor = "red";
-        memoria_A3.style.backgroundColor = "red";
+        memoria_M.style.backgroundColor = "red", memoria_M.style.pointerEvents = "auto";
+        memoria_E.style.backgroundColor = "red", memoria_E.style.pointerEvents = "auto";
+        memoria_M2.style.backgroundColor = "red", memoria_M2.style.pointerEvents = "auto";
+        memoria_O.style.backgroundColor = "red", memoria_O.style.pointerEvents = "auto";
+        memoria_R.style.backgroundColor = "red", memoria_R.style.pointerEvents = "auto";
+        memoria_I.style.backgroundColor = "red", memoria_I.style.pointerEvents = "auto";
+        memoria_A.style.backgroundColor = "red", memoria_A.style.pointerEvents = "auto";
+        memoria_D.style.backgroundColor = "red", memoria_D.style.pointerEvents = "auto";
+        memoria_E2.style.backgroundColor = "red", memoria_E2.style.pointerEvents = "auto";
+        memoria_M3.style.backgroundColor = "red", memoria_M3.style.pointerEvents = "auto";
+        memoria_A2.style.backgroundColor = "red", memoria_A2.style.pointerEvents = "auto";
+        memoria_S.style.backgroundColor = "red", memoria_S.style.pointerEvents = "auto";
+        memoria_S2.style.backgroundColor = "red", memoria_S2.style.pointerEvents = "auto";
+        memoria_A3.style.backgroundColor = "red", memoria_A3.style.pointerEvents = "auto";
 
         pala_memoria.style.textDecoration = "none"
 
     }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
+    }
+
 }
 
 function Task_cache() {
@@ -71,13 +82,14 @@ function Task_cache() {
 
     if (cache == "cache") {
 
-        cache_C.style.backgroundColor = "#6dff96";
-        memoria_A3.style.backgroundColor = "#6dff96";
-        cache_C2.style.backgroundColor = "#6dff96";
-        cache_H.style.backgroundColor = "#6dff96";
-        cache_E.style.backgroundColor = "#6dff96";
+        cache_C.style.backgroundColor = "#6dff96", cache_C.style.pointerEvents = 'none';
+        memoria_A3.style.backgroundColor = "#6dff96", memoria_A3.style.pointerEvents = 'none';
+        cache_C2.style.backgroundColor = "#6dff96", cache_C2.style.pointerEvents = 'none';
+        cache_H.style.backgroundColor = "#6dff96", cache_H.style.pointerEvents = 'none';
+        cache_E.style.backgroundColor = "#6dff96", cache_E.style.pointerEvents = 'none';
 
         pala_cache.style.textDecoration = "line-through"
+        contador += 1;
 
     } else if (cache.length < 5) {
         cache_C.style.backgroundColor = "white";
@@ -90,17 +102,24 @@ function Task_cache() {
 
     } else {
 
-        cache_C.style.backgroundColor = "red";
-        memoria_A3.style.backgroundColor = "red";
-        cache_C2.style.backgroundColor = "red";
-        cache_H.style.backgroundColor = "red";
-        cache_E.style.backgroundColor = "red";
+        cache_C.style.backgroundColor = "red", cache_C.style.pointerEvents = "auto";
+        memoria_A3.style.backgroundColor = "red", memoria_A3.style.pointerEvents = "auto";
+        cache_C2.style.backgroundColor = "red", cache_C2.style.pointerEvents = "auto";
+        cache_H.style.backgroundColor = "red", cache_H.style.pointerEvents = "auto";
+        cache_E.style.backgroundColor = "red", cache_E.style.pointerEvents = "auto";
 
 
         pala_cache.style.textDecoration = "none"
 
     }
+
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
+    }
 }
+
 
 function Task_registradores() {
 
@@ -110,21 +129,22 @@ function Task_registradores() {
     registradores = registradores.toLowerCase();
 
     if (registradores == "registradores") {
-        registrador_R.style.backgroundColor = "#6dff96"
-        registrador_E.style.backgroundColor = "#6dff96"
-        registrador_G.style.backgroundColor = "#6dff96"
-        registrador_I.style.backgroundColor = "#6dff96"
-        registrador_S.style.backgroundColor = "#6dff96"
-        registrador_T.style.backgroundColor = "#6dff96"
-        registrador_R2.style.backgroundColor = "#6dff96"
-        memoria_A.style.backgroundColor = "#6dff96"
-        registrador_D.style.backgroundColor = "#6dff96"
-        registrador_O.style.backgroundColor = "#6dff96"
-        registrador_R3.style.backgroundColor = "#6dff96"
-        registrador_E2.style.backgroundColor = "#6dff96"
-        registrador_S2.style.backgroundColor = "#6dff96"
+        registrador_R.style.backgroundColor = "#6dff96", registrador_R.style.pointerEvents = "none";
+        registrador_E.style.backgroundColor = "#6dff96", registrador_E.style.pointerEvents = "none";
+        registrador_G.style.backgroundColor = "#6dff96", registrador_G.style.pointerEvents = "none";
+        registrador_I.style.backgroundColor = "#6dff96", registrador_I.style.pointerEvents = "none";
+        registrador_S.style.backgroundColor = "#6dff96", registrador_S.style.pointerEvents = "none";
+        registrador_T.style.backgroundColor = "#6dff96", registrador_T.style.pointerEvents = "none";
+        registrador_R2.style.backgroundColor = "#6dff96", registrador_R2.style.pointerEvents = "none";
+        memoria_A.style.backgroundColor = "#6dff96", memoria_A.style.pointerEvents = "none";
+        registrador_D.style.backgroundColor = "#6dff96", registrador_D.style.pointerEvents = "none";
+        registrador_O.style.backgroundColor = "#6dff96", registrador_O.style.pointerEvents = "none";
+        registrador_R3.style.backgroundColor = "#6dff96", registrador_R3.style.pointerEvents = "none";
+        registrador_E2.style.backgroundColor = "#6dff96", registrador_E2.style.pointerEvents = "none";
+        registrador_S2.style.backgroundColor = "#6dff96", registrador_S2.style.pointerEvents = "none";
 
-        pala_registradores.style.textDecoration = "line-through"
+        pala_registradores.style.textDecoration = "line-through";
+        contador += 1;
 
     } else if (registradores.length < 13) {
         registrador_R.style.backgroundColor = "white"
@@ -144,22 +164,27 @@ function Task_registradores() {
         pala_registradores.style.textDecoration = "none"
 
     } else {
-        registrador_R.style.backgroundColor = "red"
-        registrador_E.style.backgroundColor = "red"
-        registrador_G.style.backgroundColor = "red"
-        registrador_I.style.backgroundColor = "red"
-        registrador_S.style.backgroundColor = "red"
-        registrador_T.style.backgroundColor = "red"
-        registrador_R2.style.backgroundColor = "red"
-        memoria_A.style.backgroundColor = "red"
-        registrador_D.style.backgroundColor = "red"
-        registrador_O.style.backgroundColor = "red"
-        registrador_R3.style.backgroundColor = "red"
-        registrador_E2.style.backgroundColor = "red"
-        registrador_S2.style.backgroundColor = "red"
+        registrador_R.style.backgroundColor = "red", registrador_R.style.pointerEvents = "auto";
+        registrador_E.style.backgroundColor = "red", registrador_E.style.pointerEvents = "auto";
+        registrador_G.style.backgroundColor = "red", registrador_G.style.pointerEvents = "auto";
+        registrador_I.style.backgroundColor = "red", registrador_I.style.pointerEvents = "auto";
+        registrador_S.style.backgroundColor = "red", registrador_S.style.pointerEvents = "auto";
+        registrador_T.style.backgroundColor = "red", registrador_T.style.pointerEvents = "auto";
+        registrador_R2.style.backgroundColor = "red", registrador_R2.style.pointerEvents = "auto";
+        memoria_A.style.backgroundColor = "red", memoria_A.style.pointerEvents = "auto";
+        registrador_D.style.backgroundColor = "red", registrador_D.style.pointerEvents = "auto";
+        registrador_O.style.backgroundColor = "red", registrador_O.style.pointerEvents = "auto";
+        registrador_R3.style.backgroundColor = "red", registrador_R3.style.pointerEvents = "auto";
+        registrador_E2.style.backgroundColor = "red", registrador_E2.style.pointerEvents = "auto";
+        registrador_S2.style.backgroundColor = "red", registrador_S2.style.pointerEvents = "auto";
 
         pala_registradores.style.textDecoration = "none"
 
+    }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -171,10 +196,12 @@ function Task_i5() {
 
     if (i5 == "i5") {
 
-        registrador_I.style.backgroundColor = "#6dff96";
-        i5_5.style.backgroundColor = "#6dff96";
+        registrador_I.style.backgroundColor = "#6dff96", registrador_I.style.pointerEvents = "none";
+        i5_5.style.backgroundColor = "#6dff96", i5_5.style.pointerEvents = "none";
 
         pala_i5.style.textDecoration = "line-through"
+
+        contador += 1;
 
     } else if (i5.length < 2) {
         registrador_I.style.backgroundColor = "white";
@@ -184,12 +211,17 @@ function Task_i5() {
 
     } else {
 
-        registrador_I.style.backgroundColor = "red";
-        i5_5.style.backgroundColor = "red";
+        registrador_I.style.backgroundColor = "red", registrador_I.style.pointerEvents = "auto";
+        i5_5.style.backgroundColor = "red", i5_5.style.pointerEvents = "auto";
 
 
         pala_i5.style.textDecoration = "none"
 
+    }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -201,8 +233,10 @@ function Task_i7() {
 
     if (i7 == "i7") {
 
-        registrador_I.style.backgroundColor = "#6dff96";
-        i7_7.style.backgroundColor = "#6dff96";
+        registrador_I.style.backgroundColor = "#6dff96", registrador_I.style.pointerEvents = "none";
+        i7_7.style.backgroundColor = "#6dff96", i7_7.style.pointerEvents = "none";
+
+        contador += 1;
 
         pala_i7.style.textDecoration = "line-through"
 
@@ -214,12 +248,17 @@ function Task_i7() {
 
     } else {
 
-        registrador_I.style.backgroundColor = "red";
-        i7_7.style.backgroundColor = "red";
+        registrador_I.style.backgroundColor = "red", registrador_I.style.pointerEvents = "auto";
+        i7_7.style.backgroundColor = "red", i7_7.style.pointerEvents = "auto";
 
 
         pala_i7.style.textDecoration = "none"
 
+    }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -231,10 +270,12 @@ function Task_cs() {
 
     if (cs == "cs") {
 
-        registrador_S2.style.backgroundColor = "#6dff96";
-        cs_C.style.backgroundColor = "#6dff96";
+        registrador_S2.style.backgroundColor = "#6dff96", registrador_S2.style.pointerEvents = "none";
+        cs_C.style.backgroundColor = "#6dff96", cs_C.style.pointerEvents = "none";
 
         pala_cs.style.textDecoration = "line-through"
+
+        contador += 1;
 
     } else if (cs.length < 2) {
         registrador_S2.style.backgroundColor = "white";
@@ -244,12 +285,17 @@ function Task_cs() {
 
     } else {
 
-        registrador_S2.style.backgroundColor = "red";
-        cs_C.style.backgroundColor = "red";
+        registrador_S2.style.backgroundColor = "red", registrador_S2.style.pointerEvents = "auto";
+        cs_C.style.backgroundColor = "red", cs_C.style.pointerEvents = "auto";
 
 
         pala_cs.style.textDecoration = "none"
 
+    }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -261,13 +307,14 @@ function Task_eprom() {
 
     if (eprom == "eprom") {
 
-        memoria_E.style.backgroundColor = "#6dff96";
-        eprom_P.style.backgroundColor = "#6dff96";
-        eprom_R.style.backgroundColor = "#6dff96";
-        eprom_O.style.backgroundColor = "#6dff96";
-        eprom_M.style.backgroundColor = "#6dff96";
+        memoria_E.style.backgroundColor = "#6dff96", memoria_E.style.pointerEvents = "none";
+        eprom_P.style.backgroundColor = "#6dff96", eprom_P.style.pointerEvents = "none";
+        eprom_R.style.backgroundColor = "#6dff96", eprom_R.style.pointerEvents = "none";
+        eprom_O.style.backgroundColor = "#6dff96", eprom_O.style.pointerEvents = "none";
+        eprom_M.style.backgroundColor = "#6dff96", eprom_M.style.pointerEvents = "none";
 
         pala_eprom.style.textDecoration = "line-through"
+        contador += 1;
 
     } else if (eprom.length < 5) {
 
@@ -281,14 +328,19 @@ function Task_eprom() {
 
     } else {
 
-        memoria_E.style.backgroundColor = "red";
-        eprom_P.style.backgroundColor = "red";
-        eprom_R.style.backgroundColor = "red";
-        eprom_O.style.backgroundColor = "red";
-        eprom_M.style.backgroundColor = "red";
+        memoria_E.style.backgroundColor = "red", memoria_E.style.pointerEvents = "auto";
+        eprom_P.style.backgroundColor = "red", eprom_P.style.pointerEvents = "auto";
+        eprom_R.style.backgroundColor = "red", eprom_R.style.pointerEvents = "auto";
+        eprom_O.style.backgroundColor = "red", eprom_O.style.pointerEvents = "auto";
+        eprom_M.style.backgroundColor = "red", eprom_M.style.pointerEvents = "auto";
 
         pala_eprom.style.textDecoration = "none"
 
+    }
+
+    if (contador == 1) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -300,11 +352,12 @@ function Task_ram() {
     ram = ram.toLowerCase();
 
     if (ram == "ram") {
-        ram_R.style.backgroundColor = "#6dff96"
-        ram_A.style.backgroundColor = "#6dff96"
-        eprom_M.style.backgroundColor = "#6dff96"
+        ram_R.style.backgroundColor = "#6dff96", ram_R.style.pointerEvents = "none";
+        ram_A.style.backgroundColor = "#6dff96", ram_A.style.pointerEvents = "none";
+        eprom_M.style.backgroundColor = "#6dff96", eprom_M.style.pointerEvents = "none";
 
         pala_ram.style.textDecoration = "line-through"
+        contador += 1;
 
     } else if (ram.length < 3) {
         ram_R.style.backgroundColor = "white"
@@ -313,12 +366,16 @@ function Task_ram() {
 
         pala_ram.style.textDecoration = "none"
     } else {
-        ram_R.style.backgroundColor = "red"
-        ram_A.style.backgroundColor = "red"
-        eprom_M.style.backgroundColor = "red"
+        ram_R.style.backgroundColor = "red", ram_R.style.pointerEvents = "auto";
+        ram_A.style.backgroundColor = "red", ram_A.style.pointerEvents = "auto";
+        eprom_M.style.backgroundColor = "red", eprom_M.style.pointerEvents = "auto";
 
         pala_ram.style.textDecoration = "none"
 
+    }
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -330,11 +387,12 @@ function Task_rom() {
     rom = rom.toLowerCase();
 
     if (rom == "rom") {
-        memoria_R.style.backgroundColor = "#6dff96"
-        rom_O.style.backgroundColor = "#6dff96"
-        rom_M.style.backgroundColor = "#6dff96"
+        memoria_R.style.backgroundColor = "#6dff96", memoria_R.style.pointerEvents = "none";
+        rom_O.style.backgroundColor = "#6dff96", rom_O.style.pointerEvents = "none";
+        rom_M.style.backgroundColor = "#6dff96", rom_M.style.pointerEvents = "none";
 
         pala_rom.style.textDecoration = "line-through"
+        contador += 1;
 
     } else if (rom.length < 3) {
         memoria_R.style.backgroundColor = "white"
@@ -343,13 +401,18 @@ function Task_rom() {
 
         pala_rom.style.textDecoration = "none"
     } else {
-        memoria_R.style.backgroundColor = "red"
-        rom_O.style.backgroundColor = "red"
-        rom_M.style.backgroundColor = "red"
+        memoria_R.style.backgroundColor = "red", memoria_R.style.pointerEvents = "auto";
+        rom_O.style.backgroundColor = "red", rom_O.style.pointerEvents = "auto";
+        rom_M.style.backgroundColor = "red", rom_M.style.pointerEvents = "auto";
 
         pala_rom.style.textDecoration = "none"
 
     }
+    if (contador == 18) {
+
+        container.style.display = "flex";
+    }
+
 }
 
 function Task_ula() {
@@ -360,11 +423,12 @@ function Task_ula() {
     ula = ula.toLowerCase();
 
     if (ula == "ula") {
-        ula_U.style.backgroundColor = "#6dff96"
-        ula_L.style.backgroundColor = "#6dff96"
-        ram_A.style.backgroundColor = "#6dff96"
+        ula_U.style.backgroundColor = "#6dff96", ula_U.style.pointerEvents = "none";
+        ula_L.style.backgroundColor = "#6dff96", ula_L.style.pointerEvents = "none";
+        ram_A.style.backgroundColor = "#6dff96", ram_A.style.pointerEvents = "none";
 
-        pala_ula.style.textDecoration = "line-through"
+        pala_ula.style.textDecoration = "line-through";
+        contador += 1;
 
     } else if (ula.length < 3) {
         ula_U.style.backgroundColor = "white"
@@ -373,12 +437,16 @@ function Task_ula() {
 
         pala_ula.style.textDecoration = "none"
     } else {
-        ula_U.style.backgroundColor = "red"
-        ula_L.style.backgroundColor = "red"
-        ram_A.style.backgroundColor = "red"
+        ula_U.style.backgroundColor = "red", ula_U.style.pointerEvents = "auto"
+        ula_L.style.backgroundColor = "red", ula_L.style.pointerEvents = "auto"
+        ram_A.style.backgroundColor = "red", ram_A.style.pointerEvents = "auto"
 
         pala_ula.style.textDecoration = "none"
 
+    }
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -390,11 +458,12 @@ function Task_cpu() {
     cpu = cpu.toLowerCase();
 
     if (cpu == "cpu") {
-        cpu_C.style.backgroundColor = "#6dff96"
-        cpu_P.style.backgroundColor = "#6dff96"
-        ula_U.style.backgroundColor = "#6dff96"
+        cpu_C.style.backgroundColor = "#6dff96", cpu_C.style.pointerEvents = "none";
+        cpu_P.style.backgroundColor = "#6dff96", cpu_P.style.pointerEvents = "none";
+        ula_U.style.backgroundColor = "#6dff96", ula_U.style.pointerEvents = "none";
 
-        pala_cpu.style.textDecoration = "line-through"
+        pala_cpu.style.textDecoration = "line-through";
+        contador += 1;
 
     } else if (cpu.length < 3) {
         cpu_C.style.backgroundColor = "white"
@@ -403,11 +472,16 @@ function Task_cpu() {
 
         pala_cpu.style.textDecoration = "none"
     } else {
-        cpu_C.style.backgroundColor = "red"
-        cpu_P.style.backgroundColor = "red"
-        ula_U.style.backgroundColor = "red"
+        cpu_C.style.backgroundColor = "red", cpu_C.style.pointerEvents = "auto";
+        cpu_P.style.backgroundColor = "red", cpu_P.style.pointerEvents = "auto";
+        ula_U.style.backgroundColor = "red", ula_U.style.pointerEvents = "auto";
 
         pala_cpu.style.textDecoration = "none"
+    }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -418,13 +492,14 @@ function Task_flash() {
     flash = flash.toLowerCase();
 
     if (flash == "flash") {
-        flash_F.style.backgroundColor = "#6dff96"
-        flash_L.style.backgroundColor = "#6dff96"
-        memoria_A2.style.backgroundColor = "#6dff96"
-        flash_S.style.backgroundColor = "#6dff96"
-        flash_H.style.backgroundColor = "#6dff96"
+        flash_F.style.backgroundColor = "#6dff96", flash_F.style.pointerEvents = "none";
+        flash_L.style.backgroundColor = "#6dff96", flash_L.style.pointerEvents = "none";
+        memoria_A2.style.backgroundColor = "#6dff96", memoria_A2.style.pointerEvents = "none";
+        flash_S.style.backgroundColor = "#6dff96", flash_S.style.pointerEvents = "none";
+        flash_H.style.backgroundColor = "#6dff96", flash_H.style.pointerEvents = "none";
 
-        pala_flash.style.textDecoration = "line-through"
+        pala_flash.style.textDecoration = "line-through";
+        contador += 1;
 
     } else if (flash.length < 5) {
         flash_F.style.backgroundColor = "white"
@@ -435,13 +510,17 @@ function Task_flash() {
 
         pala_flash.style.textDecoration = "none"
     } else {
-        flash_F.style.backgroundColor = "red"
-        flash_L.style.backgroundColor = "red"
-        memoria_A2.style.backgroundColor = "red"
-        flash_S.style.backgroundColor = "red"
-        flash_H.style.backgroundColor = "red"
+        flash_F.style.backgroundColor = "red", flash_F.style.pointerEvents = "auto";
+        flash_L.style.backgroundColor = "red", flash_L.style.pointerEvents = "auto";
+        memoria_A2.style.backgroundColor = "red", memoria_A2.style.pointerEvents = "auto";
+        flash_S.style.backgroundColor = "red", flash_S.style.pointerEvents = "auto";
+        flash_H.style.backgroundColor = "red", flash_H.style.pointerEvents = "auto";
 
         pala_flash.style.textDecoration = "none"
+    }
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -452,15 +531,16 @@ function Task_threads() {
     threads = threads.toLowerCase();
 
     if (threads == "threads") {
-        threads_T.style.backgroundColor = "#6dff96"
-        threads_H.style.backgroundColor = "#6dff96"
-        registrador_R.style.backgroundColor = "#6dff96"
-        threads_E.style.backgroundColor = "#6dff96"
-        threads_A.style.backgroundColor = "#6dff96"
-        threads_D.style.backgroundColor = "#6dff96"
-        threads_S.style.backgroundColor = "#6dff96"
+        threads_T.style.backgroundColor = "#6dff96", threads_T.style.pointerEvents = "none";
+        threads_H.style.backgroundColor = "#6dff96", threads_H.style.pointerEvents = "none";
+        registrador_R.style.backgroundColor = "#6dff96", registrador_R.style.pointerEvents = "none";
+        threads_E.style.backgroundColor = "#6dff96", threads_E.style.pointerEvents = "none";
+        threads_A.style.backgroundColor = "#6dff96", threads_A.style.pointerEvents = "none";
+        threads_D.style.backgroundColor = "#6dff96", threads_D.style.pointerEvents = "none";
+        threads_S.style.backgroundColor = "#6dff96", threads_S.style.pointerEvents = "none";
 
-        pala_threads.style.textDecoration = "line-through"
+        pala_threads.style.textDecoration = "line-through";
+        contador += 1;
 
     } else if (threads.length < 7) {
         threads_T.style.backgroundColor = "white"
@@ -473,15 +553,19 @@ function Task_threads() {
 
         pala_threads.style.textDecoration = "none"
     } else {
-        threads_T.style.backgroundColor = "red"
-        threads_H.style.backgroundColor = "red"
-        registrador_R.style.backgroundColor = "red"
-        threads_E.style.backgroundColor = "red"
-        threads_A.style.backgroundColor = "red"
-        threads_D.style.backgroundColor = "red"
-        threads_S.style.backgroundColor = "red"
+        threads_T.style.backgroundColor = "red", threads_T.style.pointerEvents = "auto";
+        threads_H.style.backgroundColor = "red", threads_H.style.pointerEvents = "auto";
+        registrador_R.style.backgroundColor = "red", registrador_R.style.pointerEvents = "auto";
+        threads_E.style.backgroundColor = "red", threads_E.style.pointerEvents = "auto";
+        threads_A.style.backgroundColor = "red", threads_A.style.pointerEvents = "auto";
+        threads_D.style.backgroundColor = "red", threads_D.style.pointerEvents = "auto";
+        threads_S.style.backgroundColor = "red", threads_S.style.pointerEvents = "auto";
 
         pala_threads.style.textDecoration = "none"
+    }
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -492,16 +576,17 @@ function Task_data() {
     data = data.toLowerCase();
 
     if (data == "databus") {
-        threads_D.style.backgroundColor = "#6dff96"
-        data_A.style.backgroundColor = "#6dff96"
-        data_T.style.backgroundColor = "#6dff96"
-        data_A2.style.backgroundColor = "#6dff96"
-        data_B.style.backgroundColor = "#6dff96"
-        data_U.style.backgroundColor = "#6dff96"
-        data_S.style.backgroundColor = "#6dff96"
+        threads_D.style.backgroundColor = "#6dff96", threads_D.style.pointerEvents = "none";
+        data_A.style.backgroundColor = "#6dff96", data_A.style.pointerEvents = "none";
+        data_T.style.backgroundColor = "#6dff96", data_T.style.pointerEvents = "none";
+        data_A2.style.backgroundColor = "#6dff96", data_A2.style.pointerEvents = "none";
+        data_B.style.backgroundColor = "#6dff96", data_B.style.pointerEvents = "none";
+        data_U.style.backgroundColor = "#6dff96", data_U.style.pointerEvents = "none";
+        data_S.style.backgroundColor = "#6dff96", data_S.style.pointerEvents = "none";
 
 
-        pala_data.style.textDecoration = "line-through"
+        pala_data.style.textDecoration = "line-through";
+        contador += 1;
 
     } else if (data.length < 7) {
         threads_D.style.backgroundColor = "white"
@@ -515,15 +600,20 @@ function Task_data() {
 
         pala_data.style.textDecoration = "none"
     } else {
-        threads_D.style.backgroundColor = "red"
-        data_A.style.backgroundColor = "red"
-        data_T.style.backgroundColor = "red"
-        data_A2.style.backgroundColor = "red"
-        data_B.style.backgroundColor = "red"
-        data_U.style.backgroundColor = "red"
-        data_S.style.backgroundColor = "red"
+        threads_D.style.backgroundColor = "red", threads_D.style.pointerEvents = "auto";
+        data_A.style.backgroundColor = "red", data_A.style.pointerEvents = "auto";
+        data_T.style.backgroundColor = "red", data_T.style.pointerEvents = "auto";
+        data_A2.style.backgroundColor = "red", data_A2.style.pointerEvents = "auto";
+        data_B.style.backgroundColor = "red", data_B.style.pointerEvents = "auto";
+        data_U.style.backgroundColor = "red", data_U.style.pointerEvents = "auto";
+        data_S.style.backgroundColor = "red", data_S.style.pointerEvents = "auto";
 
         pala_data.style.textDecoration = "none"
+    }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -534,19 +624,21 @@ function Task_address() {
     address = address.toLowerCase();
 
     if (address == "addressbus") {
-        address_A.style.backgroundColor = "#6dff96"
-        address_D.style.backgroundColor = "#6dff96"
-        address_D2.style.backgroundColor = "#6dff96"
-        address_R.style.backgroundColor = "#6dff96"
-        address_E.style.backgroundColor = "#6dff96"
-        address_S.style.backgroundColor = "#6dff96"
-        memoria_S2.style.backgroundColor = "#6dff96"
-        address_B.style.backgroundColor = "#6dff96"
-        address_U.style.backgroundColor = "#6dff96"
-        address_S2.style.backgroundColor = "#6dff96"
+        address_A.style.backgroundColor = "#6dff96", address_A.style.pointerEvents = "none";
+        address_D.style.backgroundColor = "#6dff96", address_D.style.pointerEvents = "none";
+        address_D2.style.backgroundColor = "#6dff96", address_D2.style.pointerEvents = "none";
+        address_R.style.backgroundColor = "#6dff96", address_R.style.pointerEvents = "none";
+        address_E.style.backgroundColor = "#6dff96", address_E.style.pointerEvents = "none";
+        address_S.style.backgroundColor = "#6dff96", address_S.style.pointerEvents = "none";
+        memoria_S2.style.backgroundColor = "#6dff96", memoria_S2.style.pointerEvents = "none";
+        address_B.style.backgroundColor = "#6dff96", address_B.style.pointerEvents = "none";
+        address_U.style.backgroundColor = "#6dff96", address_U.style.pointerEvents = "none";
+        address_S2.style.backgroundColor = "#6dff96", address_S2.style.pointerEvents = "none";
 
 
         pala_address.style.textDecoration = "line-through"
+        contador += 1;
+
 
     } else if (address.length < 10) {
         address_A.style.backgroundColor = "white"
@@ -563,19 +655,24 @@ function Task_address() {
 
         pala_address.style.textDecoration = "none"
     } else {
-        address_A.style.backgroundColor = "red"
-        address_D.style.backgroundColor = "red"
-        address_D2.style.backgroundColor = "red"
-        address_R.style.backgroundColor = "red"
-        address_E.style.backgroundColor = "red"
-        address_S.style.backgroundColor = "red"
-        memoria_S2.style.backgroundColor = "red"
-        address_B.style.backgroundColor = "red"
-        address_U.style.backgroundColor = "red"
-        address_S2.style.backgroundColor = "red"
+        address_A.style.backgroundColor = "red", address_A.style.pointerEvents = "auto";
+        address_D.style.backgroundColor = "red", address_D.style.pointerEvents = "auto";
+        address_D2.style.backgroundColor = "red", address_D2.style.pointerEvents = "auto";
+        address_R.style.backgroundColor = "red", address_R.style.pointerEvents = "auto";
+        address_E.style.backgroundColor = "red", address_E.style.pointerEvents = "auto";
+        address_S.style.backgroundColor = "red", address_S.style.pointerEvents = "auto";
+        memoria_S2.style.backgroundColor = "red", memoria_S2.style.pointerEvents = "auto";
+        address_B.style.backgroundColor = "red", address_B.style.pointerEvents = "auto";
+        address_U.style.backgroundColor = "red", address_U.style.pointerEvents = "auto";
+        address_S2.style.backgroundColor = "red", address_S2.style.pointerEvents = "auto";
 
         pala_address.style.textDecoration = "none"
-    }
+    };
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
+    };
 }
 
 function Task_dual() {
@@ -585,16 +682,17 @@ function Task_dual() {
     dual = dual.toLowerCase();
 
     if (dual == "dualcore") {
-        dual_D.style.backgroundColor = "#6dff96"
-        dual_U.style.backgroundColor = "#6dff96"
-        dual_A.style.backgroundColor = "#6dff96"
-        dual_L.style.backgroundColor = "#6dff96"
-        dual_C.style.backgroundColor = "#6dff96"
-        dual_0.style.backgroundColor = "#6dff96"
-        dual_R.style.backgroundColor = "#6dff96"
-        registrador_E2.style.backgroundColor = "#6dff96"
+        dual_D.style.backgroundColor = "#6dff96", dual_D.style.pointerEvents = "none";
+        dual_U.style.backgroundColor = "#6dff96", dual_U.style.pointerEvents = "none";
+        dual_A.style.backgroundColor = "#6dff96", dual_A.style.pointerEvents = "none";
+        dual_L.style.backgroundColor = "#6dff96", dual_L.style.pointerEvents = "none";
+        dual_C.style.backgroundColor = "#6dff96", dual_C.style.pointerEvents = "none";
+        dual_0.style.backgroundColor = "#6dff96", dual_0.style.pointerEvents = "none";
+        dual_R.style.backgroundColor = "#6dff96", dual_R.style.pointerEvents = "none";
+        registrador_E2.style.backgroundColor = "#6dff96", registrador_E2.style.pointerEvents = "none";
 
 
+        contador += 1;
         pala_dual.style.textDecoration = "line-through"
 
     } else if (dual.length < 8) {
@@ -610,39 +708,45 @@ function Task_dual() {
 
         pala_dual.style.textDecoration = "none"
     } else {
-        dual_D.style.backgroundColor = "red"
-        dual_U.style.backgroundColor = "red"
-        dual_A.style.backgroundColor = "red"
-        dual_L.style.backgroundColor = "red"
-        dual_C.style.backgroundColor = "red"
-        dual_0.style.backgroundColor = "red"
-        dual_R.style.backgroundColor = "red"
-        registrador_E2.style.backgroundColor = "red"
+        dual_D.style.backgroundColor = "red", dual_D.style.pointerEvents = "auto";
+        dual_U.style.backgroundColor = "red", dual_U.style.pointerEvents = "auto";
+        dual_A.style.backgroundColor = "red", dual_A.style.pointerEvents = "auto";
+        dual_L.style.backgroundColor = "red", dual_L.style.pointerEvents = "auto";
+        dual_C.style.backgroundColor = "red", dual_C.style.pointerEvents = "auto";
+        dual_0.style.backgroundColor = "red", dual_0.style.pointerEvents = "auto";
+        dual_R.style.backgroundColor = "red", dual_R.style.pointerEvents = "auto";
+        registrador_E2.style.backgroundColor = "red", registrador_E2.style.pointerEvents = "auto";
 
 
         pala_dual.style.textDecoration = "none"
+    }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
 
 function Task_quad() {
 
-    var quad = quad_Q.value + quad_U.value +  dual_A.value + quad_D.value + quad_C.value  + quad_O.value + quad_R.value + quad_E.value;
+    var quad = quad_Q.value + quad_U.value + dual_A.value + quad_D.value + quad_C.value + quad_O.value + quad_R.value + quad_E.value;
 
     quad = quad.toLowerCase();
 
     if (quad == "quadcore") {
-        quad_Q.style.backgroundColor = "#6dff96"
-        quad_U.style.backgroundColor = "#6dff96"
-        dual_A.style.backgroundColor = "#6dff96"
-        quad_D.style.backgroundColor = "#6dff96"
-        quad_C.style.backgroundColor = "#6dff96"
-        quad_O.style.backgroundColor = "#6dff96"
-        quad_R.style.backgroundColor = "#6dff96"
-        quad_E.style.backgroundColor = "#6dff96"
+        quad_Q.style.backgroundColor = "#6dff96", quad_Q.style.pointerEvents = "none";
+        quad_U.style.backgroundColor = "#6dff96", quad_U.style.pointerEvents = "none";
+        dual_A.style.backgroundColor = "#6dff96", dual_A.style.pointerEvents = "none";
+        quad_D.style.backgroundColor = "#6dff96", quad_D.style.pointerEvents = "none";
+        quad_C.style.backgroundColor = "#6dff96", quad_C.style.pointerEvents = "none";
+        quad_O.style.backgroundColor = "#6dff96", quad_O.style.pointerEvents = "none";
+        quad_R.style.backgroundColor = "#6dff96", quad_R.style.pointerEvents = "none";
+        quad_E.style.backgroundColor = "#6dff96", quad_E.style.pointerEvents = "none";
 
 
-        pala_quad.style.textDecoration = "line-through"
+        pala_quad.style.textDecoration = "line-through";
+        contador += 1;
 
     } else if (quad.length < 8) {
         quad_Q.style.backgroundColor = "white"
@@ -657,17 +761,22 @@ function Task_quad() {
 
         pala_quad.style.textDecoration = "none"
     } else {
-        quad_Q.style.backgroundColor = "red"
-        quad_U.style.backgroundColor = "red"
-        dual_A.style.backgroundColor = "red"
-        quad_D.style.backgroundColor = "red"
-        quad_C.style.backgroundColor = "red"
-        quad_O.style.backgroundColor = "red"
-        quad_R.style.backgroundColor = "red"
-        quad_E.style.backgroundColor = "red"
+        quad_Q.style.backgroundColor = "red", quad_Q.style.pointerEvents = "auto";
+        quad_U.style.backgroundColor = "red", quad_U.style.pointerEvents = "auto";
+        dual_A.style.backgroundColor = "red", dual_A.style.pointerEvents = "auto";
+        quad_D.style.backgroundColor = "red", quad_D.style.pointerEvents = "auto";
+        quad_C.style.backgroundColor = "red", quad_C.style.pointerEvents = "auto";
+        quad_O.style.backgroundColor = "red", quad_O.style.pointerEvents = "auto";
+        quad_R.style.backgroundColor = "red", quad_R.style.pointerEvents = "auto";
+        quad_E.style.backgroundColor = "red", quad_E.style.pointerEvents = "auto";
 
 
         pala_quad.style.textDecoration = "none"
+    }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
     }
 }
 
@@ -679,11 +788,12 @@ function Task_dma() {
     dma = dma.toLowerCase();
 
     if (dma == "dma") {
-        dual_D.style.backgroundColor = "#6dff96"
-        dma_M.style.backgroundColor = "#6dff96"
-        dma_A.style.backgroundColor = "#6dff96"
+        dual_D.style.backgroundColor = "#6dff96", dual_D.style.pointerEvents = "none";
+        dma_M.style.backgroundColor = "#6dff96", dma_M.style.pointerEvents = "none";
+        dma_A.style.backgroundColor = "#6dff96", dma_A.style.pointerEvents = "none";
 
-        pala_dma.style.textDecoration = "line-through"
+        pala_dma.style.textDecoration = "line-through";
+        contador += 1;
 
     } else if (dma.length < 3) {
         dual_D.style.backgroundColor = "white"
@@ -692,10 +802,21 @@ function Task_dma() {
 
         pala_dma.style.textDecoration = "none"
     } else {
-        dual_D.style.backgroundColor = "red"
-        dma_M.style.backgroundColor = "red"
-        dma_A.style.backgroundColor = "red"
+        dual_D.style.backgroundColor = "red", dual_D.style.pointerEvents = "auto";
+        dma_M.style.backgroundColor = "red", dma_M.style.pointerEvents = "auto";
+        dma_A.style.backgroundColor = "red", dma_A.style.pointerEvents = "auto";
 
         pala_dma.style.textDecoration = "none"
     }
+
+    if (contador == 18) {
+
+        container.style.display = "flex";
+    }
+}
+
+function fechamento() {
+    
+    container.style.display = "none";
+    botao.style.display = "block";
 }
