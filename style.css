@@ -11,6 +11,12 @@ body {
     overflow-x: hidden;
 }
 
+canvas{
+
+    width: 100vw;
+    height: 100vh;
+}
+
 .main {
 
     display: flex;

@@ -1,4 +1,5 @@
 var contador = 0;
+console.log(contador);
 
 function Task_memoria() {
     var memoria = memoria_M.value + memoria_E.value + memoria_M2.value + memoria_O.value + memoria_R.value + memoria_I.value + memoria_A.value + memoria_D.value + memoria_E2.value + memoria_M3.value + memoria_A2.value + memoria_S.value + memoria_S2.value + memoria_A3.value;
@@ -24,6 +25,7 @@ function Task_memoria() {
         memoria_A3.style.backgroundColor = "#6dff96", memoria_A3.style.pointerEvents = "none";
 
         pala_memoria.style.textDecoration = "line-through" //funcionalidade para caso o usuario acertar a resposta, risca a pergunta daquela resposta.
+        pala_memoria.style.color = "black"
 
         // contador de respostas//
         contador += 1;
@@ -70,6 +72,7 @@ function Task_memoria() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 
 }
@@ -89,6 +92,8 @@ function Task_cache() {
         cache_E.style.backgroundColor = "#6dff96", cache_E.style.pointerEvents = 'none';
 
         pala_cache.style.textDecoration = "line-through"
+        pala_cache.style.color = "black"
+
         contador += 1;
 
     } else if (cache.length < 5) {
@@ -117,6 +122,7 @@ function Task_cache() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -144,6 +150,7 @@ function Task_registradores() {
         registrador_S2.style.backgroundColor = "#6dff96", registrador_S2.style.pointerEvents = "none";
 
         pala_registradores.style.textDecoration = "line-through";
+        pala_registradores.style.color = "black"
         contador += 1;
 
     } else if (registradores.length < 13) {
@@ -185,6 +192,7 @@ function Task_registradores() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -200,6 +208,7 @@ function Task_i5() {
         i5_5.style.backgroundColor = "#6dff96", i5_5.style.pointerEvents = "none";
 
         pala_i5.style.textDecoration = "line-through"
+        pala_i5.style.color = "black"
 
         contador += 1;
 
@@ -222,6 +231,7 @@ function Task_i5() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -239,6 +249,7 @@ function Task_i7() {
         contador += 1;
 
         pala_i7.style.textDecoration = "line-through"
+        pala_i7.style.color = "black"
 
     } else if (i7.length < 2) {
         registrador_I.style.backgroundColor = "white";
@@ -259,6 +270,7 @@ function Task_i7() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -274,6 +286,7 @@ function Task_cs() {
         cs_C.style.backgroundColor = "#6dff96", cs_C.style.pointerEvents = "none";
 
         pala_cs.style.textDecoration = "line-through"
+        pala_cs.style.color = "black"
 
         contador += 1;
 
@@ -296,6 +309,7 @@ function Task_cs() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -314,6 +328,7 @@ function Task_eprom() {
         eprom_M.style.backgroundColor = "#6dff96", eprom_M.style.pointerEvents = "none";
 
         pala_eprom.style.textDecoration = "line-through"
+        pala_eprom.style.color = "black"
         contador += 1;
 
     } else if (eprom.length < 5) {
@@ -338,9 +353,10 @@ function Task_eprom() {
 
     }
 
-    if (contador == 1) {
+    if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -357,6 +373,7 @@ function Task_ram() {
         eprom_M.style.backgroundColor = "#6dff96", eprom_M.style.pointerEvents = "none";
 
         pala_ram.style.textDecoration = "line-through"
+        pala_ram.style.color = "black"
         contador += 1;
 
     } else if (ram.length < 3) {
@@ -376,6 +393,7 @@ function Task_ram() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -392,6 +410,7 @@ function Task_rom() {
         rom_M.style.backgroundColor = "#6dff96", rom_M.style.pointerEvents = "none";
 
         pala_rom.style.textDecoration = "line-through"
+        pala_rom.style.color = "black"
         contador += 1;
 
     } else if (rom.length < 3) {
@@ -411,6 +430,7 @@ function Task_rom() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 
 }
@@ -428,6 +448,7 @@ function Task_ula() {
         ram_A.style.backgroundColor = "#6dff96", ram_A.style.pointerEvents = "none";
 
         pala_ula.style.textDecoration = "line-through";
+        pala_ula.style.color = "black"
         contador += 1;
 
     } else if (ula.length < 3) {
@@ -447,6 +468,7 @@ function Task_ula() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -463,6 +485,7 @@ function Task_cpu() {
         ula_U.style.backgroundColor = "#6dff96", ula_U.style.pointerEvents = "none";
 
         pala_cpu.style.textDecoration = "line-through";
+        pala_cpu.style.color = "black"
         contador += 1;
 
     } else if (cpu.length < 3) {
@@ -482,6 +505,7 @@ function Task_cpu() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -499,6 +523,7 @@ function Task_flash() {
         flash_H.style.backgroundColor = "#6dff96", flash_H.style.pointerEvents = "none";
 
         pala_flash.style.textDecoration = "line-through";
+        pala_flash.style.color = "black"
         contador += 1;
 
     } else if (flash.length < 5) {
@@ -521,6 +546,7 @@ function Task_flash() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -540,6 +566,7 @@ function Task_threads() {
         threads_S.style.backgroundColor = "#6dff96", threads_S.style.pointerEvents = "none";
 
         pala_threads.style.textDecoration = "line-through";
+        pala_threads.style.color = "black"
         contador += 1;
 
     } else if (threads.length < 7) {
@@ -566,6 +593,7 @@ function Task_threads() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -586,6 +614,7 @@ function Task_data() {
 
 
         pala_data.style.textDecoration = "line-through";
+        pala_data.style.color = "black"
         contador += 1;
 
     } else if (data.length < 7) {
@@ -614,6 +643,7 @@ function Task_data() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -637,6 +667,7 @@ function Task_address() {
 
 
         pala_address.style.textDecoration = "line-through"
+        pala_address.style.color = "black"
         contador += 1;
 
 
@@ -672,6 +703,7 @@ function Task_address() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     };
 }
 
@@ -694,6 +726,7 @@ function Task_dual() {
 
         contador += 1;
         pala_dual.style.textDecoration = "line-through"
+        pala_dual.style.color = "black"
 
     } else if (dual.length < 8) {
         dual_D.style.backgroundColor = "white"
@@ -724,6 +757,7 @@ function Task_dual() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -746,6 +780,7 @@ function Task_quad() {
 
 
         pala_quad.style.textDecoration = "line-through";
+        pala_quad.style.color = "black"
         contador += 1;
 
     } else if (quad.length < 8) {
@@ -777,6 +812,7 @@ function Task_quad() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
@@ -793,6 +829,7 @@ function Task_dma() {
         dma_A.style.backgroundColor = "#6dff96", dma_A.style.pointerEvents = "none";
 
         pala_dma.style.textDecoration = "line-through";
+        pala_dma.style.color = "black"
         contador += 1;
 
     } else if (dma.length < 3) {
@@ -812,11 +849,120 @@ function Task_dma() {
     if (contador == 18) {
 
         container.style.display = "flex";
+        animate();
     }
 }
 
 function fechamento() {
     
+    
     container.style.display = "none";
     botao.style.display = "block";
+}
+
+/* efeito de fogos de artificio*/
+class Fogo {
+    constructor(pos, targetY, radius, color, speed) {
+        this.radius = radius;
+        this.pos = pos;
+        this.targetY = targetY;
+        this.color = color;
+        this.speed = speed;
+    }
+
+    draw() {
+        ctx.beginPath();
+        ctx.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+    }
+
+    update() {
+        this.draw();
+        if (this.pos.y > this.targetY) {
+            this.pos.y -= this.speed;
+        }
+    }
+}
+
+class Particula {
+    constructor(pos, radius, color, speed) {
+        this.pos = pos;
+        this.radius = radius;
+        this.speed = speed;
+        this.color = color;
+        this.alpha = 1;
+    }
+
+    draw() {
+        ctx.save();
+        ctx.globalAlpha = this.alpha;
+        ctx.beginPath();
+        ctx.arc(this.pos.x, this.pos.y, this.radius, 0, Math.PI * 2, false);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+        ctx.restore();
+    }
+
+    update() {
+        this.speed.x *= 0.99;
+        this.speed.y *= 0.99;
+        this.pos.x += this.speed.x;
+        this.pos.y += this.speed.y;
+        this.alpha -= 0.02;
+        this.draw();
+    }
+}
+
+const canvas = document.getElementById("canvas");
+canvas.width = innerWidth;
+canvas.height = innerHeight;
+
+const ctx = canvas.getContext("2d");
+
+let fogos = [],
+    particulas = [];
+
+setInterval(() => {
+    let radius = Math.floor(Math.random() * (10 - 5) + 5),
+        pos = {
+            x: Math.random() * canvas.width,
+            y: canvas.height + radius
+        },
+        targetY = Math.random() * ((canvas.height - 20) - 20) + 20;
+    color = `hsl(${Math.random() * 360}, 50%, 50%)`,
+        speed = Math.floor(Math.random() * (25 - 20));
+
+    fogos.push(new Fogo(pos, targetY, radius, color, speed));
+}, 250);
+
+function animate() {
+    requestAnimationFrame(animate);
+    // ctx.fillStyle = "transparent";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    fogos.forEach((fogo, index) => {
+        if (fogo.yI <= fogo.yF) {
+            setTimeout(() => {
+                fogos.splice(index, 1);
+            }, 0);
+            for (let i = 0; i < fogo.radius * 8; i++) {
+                let pos = fogo.pos,
+                    radius = Math.random() * 2,
+                    color = fogo.color,
+                    speed = { x: (Math.random() - 0.5) * (Math.random() * 8), y: (Math.random() - 0.5) * (Math.random() * 8) };
+                particulas.push(new Particula(pos, radius, color, speed));
+            }
+        } else {
+            fogo.update();
+        }
+    });
+
+    particulas.forEach((p, index) => {
+        if (p.alpha <= 0) {
+            particulas.splice(index, 1);
+        } else {
+            p.update();
+        }
+    });
 }
